@@ -16,6 +16,7 @@
 		74D7CC21253DD86500E21952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D7CC1F253DD86500E21952 /* LaunchScreen.storyboard */; };
 		74D7CC2C253DD86600E21952 /* Covid_Updates__KETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7CC2B253DD86600E21952 /* Covid_Updates__KETests.swift */; };
 		74D7CC37253DD86600E21952 /* Covid_Updates__KEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7CC36253DD86600E21952 /* Covid_Updates__KEUITests.swift */; };
+		F12CD952253F52EC00185ED7 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12CD951253F52EC00185ED7 /* Stats.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		74D7CC32253DD86600E21952 /* Covid Updates -KEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid Updates -KEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D7CC36253DD86600E21952 /* Covid_Updates__KEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_Updates__KEUITests.swift; sourceTree = "<group>"; };
 		74D7CC38253DD86600E21952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12CD951253F52EC00185ED7 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				74D7CC1F253DD86500E21952 /* LaunchScreen.storyboard */,
 				74D7CC22253DD86600E21952 /* Info.plist */,
 				74D7CC1A253DD86100E21952 /* Covid_Updates__KE.xcdatamodeld */,
+				F12CD951253F52EC00185ED7 /* Stats.storyboard */,
 			);
 			path = "Covid Updates -KE";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				74D7CC21253DD86500E21952 /* LaunchScreen.storyboard in Resources */,
 				74D7CC1E253DD86500E21952 /* Assets.xcassets in Resources */,
+				F12CD952253F52EC00185ED7 /* Stats.storyboard in Resources */,
 				74D7CC19253DD86100E21952 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
