@@ -16,8 +16,14 @@ class ViewController: UIViewController {
     }
     
     let provider = MoyaProvider<KEService>()
-
+    
+    
+    func downloadcountrydata(_ country: String) {
+        provider.request(.Request (name: "kenya")) { result in
+                
+        }
     }
+}
     
 
 
