@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 public enum KEService {
-    case Request(name: String)
+    case RequestKE(name: String)
 }
 
 extension KEService: TargetType {
@@ -18,35 +18,35 @@ extension KEService: TargetType {
     
     public var path: String {
         switch self {
-        case .Request:
+        case .RequestKE:
             return "/country"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .Request:
+        case .RequestKE:
         return .get
         }
     }
     
     public var task: Task {
         switch self {
-        case .Request(let name):
+        case .RequestKE(let name):
         return .requestParameters(parameters: ["name": name], encoding: URLEncoding.default)
         }
     }
     
     public var sampleData: Data {
         switch self {
-        case .Request:
+        case .RequestKE:
         return ("{}".data(using: String.Encoding.utf8)! as NSData) as Data
         }
     }
     
     public var mehod: Moya.Method {
         switch self {
-        case .Request:
+        case .RequestKE:
         return .get
         }
     }
