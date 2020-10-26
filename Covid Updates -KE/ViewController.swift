@@ -10,6 +10,8 @@ import Moya
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var casesStats: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,12 +24,14 @@ class ViewController: UIViewController {
     
     // Download Kenya data - API Fetch
     func downloadcountrydata(_ country: String) {
-        provider.request(.RequestKE (name: "kenya")) { result in
+        provider.request(.RequestKE (name: "kenya" )) { result in
             switch result {
-            case .success(_):
+            case .success(let moyaResponse):
+                let data = moyaResponse.data // Data, your JSON response is probably in here!
+                let statusCode = moyaResponse.statusCode
                     // do something with the response data or statusCode
                     print("Successful Response")
-            case .failure(_):
+            case let .failure(error):
                     // this means there was a network failure - either the request
                     // wasn't sent (connectivity), or no response was received (server
                     // timed out).  If the server responds with a 4xx or 5xx error, that
