@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         provider.request(.RequestKE (name: "kenya" )) { result in
             switch result {
             case .success(let moyaResponse):
-                let data = moyaResponse.data // Data, your JSON response is probably in here!
-                let statusCode = moyaResponse.statusCode
+                _ = moyaResponse.data // Data, your JSON response is probably in here!
+                _ = moyaResponse.statusCode
                     // do something with the response data or statusCode
                     print("Successful Response")
             case let .failure(error):
