@@ -201,7 +201,7 @@
 				74D7CC0A253DD86100E21952 /* Sources */,
 				74D7CC0B253DD86100E21952 /* Frameworks */,
 				74D7CC0C253DD86100E21952 /* Resources */,
-				E6D3160FCBA16570E2BF4070 /* [CP] Embed Pods Frameworks */,
+				D4D0FB9515097D03A8060129 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,7 +239,7 @@
 				74D7CC2E253DD86600E21952 /* Sources */,
 				74D7CC2F253DD86600E21952 /* Frameworks */,
 				74D7CC30253DD86600E21952 /* Resources */,
-				B0A126A2B7E90466CB6A1F4F /* [CP] Embed Pods Frameworks */,
+				D7CB51C3C62B9D76D4BB54F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,24 +387,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0A126A2B7E90466CB6A1F4F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6D3160FCBA16570E2BF4070 /* [CP] Embed Pods Frameworks */ = {
+		D4D0FB9515097D03A8060129 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,6 +402,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE/Pods-Covid Updates -KE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CB51C3C62B9D76D4BB54F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

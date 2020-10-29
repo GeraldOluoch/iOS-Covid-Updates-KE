@@ -24,11 +24,14 @@ class ViewController: UIViewController {
     
     // Download Kenya data - API Fetch
     func downloadcountrydata(_ country: String) {
-        provider.request(.RequestKE (name: "kenya" )) { result in
+        provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
+            guard let self = self else {return}
             switch result {
-            case .success(let moyaResponse):
-                _ = moyaResponse.data // Data, your JSON response is probably in here!
-                _ = moyaResponse.statusCode
+            case .success(let response):
+                do {
+                    print (try response.mapJSON())
+                    } catch {
+                }
                     // do something with the response data or statusCode
                     print("Successful Response")
             case let .failure(error):
