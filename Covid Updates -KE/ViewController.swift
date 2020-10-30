@@ -11,6 +11,8 @@ import Moya
 class ViewController: UIViewController {
 
     @IBOutlet weak var casesStats: UILabel!
+    @IBOutlet weak var recoveredStats: UILabel!
+    @IBOutlet weak var deathsStats: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

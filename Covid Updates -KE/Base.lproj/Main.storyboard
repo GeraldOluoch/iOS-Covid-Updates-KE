@@ -76,6 +76,8 @@
                     </view>
                     <connections>
                         <outlet property="casesStats" destination="8ki-xL-wrm" id="Ny3-KE-7Ng"/>
+                        <outlet property="deathsStats" destination="7zH-BC-g1Y" id="WGx-89-Ziz"/>
+                        <outlet property="recoveredStats" destination="Kd8-Hu-8yL" id="t0L-an-hQb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
