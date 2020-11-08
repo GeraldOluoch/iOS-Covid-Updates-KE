@@ -29,9 +29,9 @@ class ViewController: UIViewController {
         provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
             guard let self = self else {return}
             switch result {
-            case .success(let response):
+            case let .success(moyaResponse):
                 do {
-                    print (try response.mapJSON())
+                    print (try moyaResponse.mapJSON())
                     } catch {
                 }
                     // do something with the response data or statusCode
