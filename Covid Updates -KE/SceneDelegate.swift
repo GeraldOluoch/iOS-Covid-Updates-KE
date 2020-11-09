@@ -1,9 +1,6 @@
-//
 //  SceneDelegate.swift
 //  Covid Updates -KE
-//
 //  Created by Gerald on 19/10/2020.
-//
 
 import UIKit
 

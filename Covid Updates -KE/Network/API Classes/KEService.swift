@@ -1,9 +1,6 @@
-//
 //  KEService.swift
 //  Covid Updates -KE
-//
 //  Created by Gerald on 22/10/2020.
-//
 
 import Foundation
 import Moya
