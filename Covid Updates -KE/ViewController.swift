@@ -11,6 +11,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
     
+    //
+    private var state: State = .loading {
+      didSet {
+        switch state {
+        case .loading:
+          print("App Passed:- Application loaded successfully")
+        case .error:
+          print("App Failed:- Application failed to load")
+        }
+      }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,6 +35,7 @@ class ViewController: UIViewController {
     
     // Download Kenya data - API Fetch
     func downloadcountrydata(_ country: String) {
+        state = .loading
         provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
             guard let self = self else {return}
             switch result {
@@ -44,6 +57,13 @@ class ViewController: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension ViewController {
+    enum State {
+        case loading
+        case error
     }
 }
     
