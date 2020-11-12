@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                 }
                     // do something with the response data or statusCode
                     print("Successful Response")
-            case let .failure(error):
+            case .failure(_):
                     // this means there was a network failure - either the request
                     // wasn't sent (connectivity), or no response was received (server
                     // timed out).  If the server responds with a 4xx or 5xx error, that
@@ -66,6 +66,10 @@ extension ViewController {
         case error
     }
 }
-    
+ 
+
+/* TODO List */
+//TODO: Print complete JSON upon loading view
+//TODO: Pass data to UILabel in view
 
 
