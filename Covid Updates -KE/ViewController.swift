@@ -39,14 +39,14 @@ class ViewController: UIViewController {
         provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
             guard let self = self else {return}
             switch result {
-            case let .success(moyaResponse):
+            case .success(let moyaResponse):
                 do {
                     print (try moyaResponse.mapJSON())
                     } catch {
+                        self.state = .error
                 }
                     // do something with the response data or statusCode
-                    print("Successful Response")
-            case .failure(_):
+            case .failure:
                     // this means there was a network failure - either the request
                     // wasn't sent (connectivity), or no response was received (server
                     // timed out).  If the server responds with a 4xx or 5xx error, that

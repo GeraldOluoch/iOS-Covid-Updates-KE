@@ -11,7 +11,7 @@ public enum KEService {
 
 extension KEService: TargetType {
     
-    public var baseURL: URL {return URL(string: "https://rapidapi.p.rapidapi.com")! }
+    public var baseURL: URL {return NSURL(string: "https://rapidapi.p.rapidapi.com")! as URL }
     
     public var path: String {
         switch self {
@@ -49,7 +49,7 @@ extension KEService: TargetType {
     }
     
     public var headers: [String: String]? {
-        return ["x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+        return ["x-rapidapi-host" : "covid-19-data.p.rapidapi.com",
                 "x-rapidapi-key" : "3bee4b7e02msh0cf90a5b2a0ca73p15204cjsn43ca8fe36992"]
     }
 }
