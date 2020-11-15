@@ -71,5 +71,6 @@ extension ViewController {
 /* TODO List */
 //TODO: Print complete JSON upon loading view
 //TODO: Pass data to UILabel in view
+//TODO: Fix Flag UI
 
 
