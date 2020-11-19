@@ -72,5 +72,6 @@ extension ViewController {
 //TODO: Print complete JSON upon loading view
 //TODO: Pass data to UILabel in view
 //TODO: Fix Flag UI
+//TODO: Change JSON call from using Moya to default iOS call
 
 
