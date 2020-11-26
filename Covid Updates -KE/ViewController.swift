@@ -11,16 +11,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
     
-    private var state: State = .loading {
-      didSet {
-        switch state {
-        case .loading:
-          print("App Passed:- Application loaded successfully")
-        case .error:
-          print("App Failed:- Application failed to load")
-        }
-      }
-    }
+//    private var state: State = .loading {
+//      didSet {
+//        switch state {
+//        case .loading:
+//          print("App Passed:- Application loaded successfully")
+//        case .error:
+//          print("App Failed:- Application failed to load")
+//        }
+//      }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,38 @@ class ViewController: UIViewController {
         
         //Call API Fetch
 //        downloadcountrydata("kenya")
+        
+        let urlString = "https://rapidapi.p.rapidapi.com/country"
+        
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            return
+        }
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            
+            
+            //check for errors
+            if error == nil && data != nil {
+                
+                //Parse JSON
+                let decoder = JSONDecoder()
+                
+                do {
+                
+                let dataByName = try decoder.decode(DataByName.self, from: data!)
+                    
+                    print (dataByName)
+            }
+                catch {
+                    print("Error in JSON parsing")
+                }
+            }
+        }
+        // Make the API call
+        dataTask.resume()
     }
     
 //    let provider = MoyaProvider<KEService>()
