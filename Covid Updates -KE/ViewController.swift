@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
     
-    //
     private var state: State = .loading {
       didSet {
         switch state {
@@ -28,36 +27,36 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //Call API Fetch
-        downloadcountrydata("kenya")
+//        downloadcountrydata("kenya")
     }
     
-    let provider = MoyaProvider<KEService>()
+//    let provider = MoyaProvider<KEService>()
     
-    // Download Kenya data - API Fetch
-    func downloadcountrydata(_ country: String) {
-        state = .loading
-        provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
-            guard let self = self else {return}
-            switch result {
-            case .success(let moyaResponse):
-                do {
-                    print (try moyaResponse.mapJSON())
-                    } catch {
-                        self.state = .error
-                }
-                    // do something with the response data or statusCode
-            case .failure:
-                    // this means there was a network failure - either the request
-                    // wasn't sent (connectivity), or no response was received (server
-                    // timed out).  If the server responds with a 4xx or 5xx error, that
-                    // will be sent as a ".success"-ful response.
-                let alertController = UIAlertController(title: "Covid Stats -KE", message:
-                    "Please check your internet!", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                    self.present(alertController, animated: true, completion: nil)
-            }
-        }
-    }
+    // Download Kenya data - API Fetch - Deprecated MOYA fetch
+//    func downloadcountrydata(_ country: String) {
+//        state = .loading
+//        provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
+//            guard let self = self else {return}
+//            switch result {
+//            case .success(let moyaResponse):
+//                do {
+//                    print (try moyaResponse.mapJSON())
+//                    } catch {
+//                        self.state = .error
+//                }
+//                    // do something with the response data or statusCode
+//            case .failure:
+//                    // this means there was a network failure - either the request
+//                    // wasn't sent (connectivity), or no response was received (server
+//                    // timed out).  If the server responds with a 4xx or 5xx error, that
+//                    // will be sent as a ".success"-ful response.
+//                let alertController = UIAlertController(title: "Covid Stats -KE", message:
+//                    "Please check your internet!", preferredStyle: .alert)
+//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//                    self.present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//    }
 }
 
 extension ViewController {

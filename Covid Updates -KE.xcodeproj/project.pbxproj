@@ -19,6 +19,7 @@
 		74D7CC21253DD86500E21952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D7CC1F253DD86500E21952 /* LaunchScreen.storyboard */; };
 		74D7CC2C253DD86600E21952 /* Covid_Updates__KETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7CC2B253DD86600E21952 /* Covid_Updates__KETests.swift */; };
 		74D7CC37253DD86600E21952 /* Covid_Updates__KEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7CC36253DD86600E21952 /* Covid_Updates__KEUITests.swift */; };
+		74E1C077256F841C00A82ABF /* DataByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C076256F841C00A82ABF /* DataByName.swift */; };
 		C8AF34CA95BB83B7F860769C /* Pods_Covid_Updates__KETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC52C4480899147A70A9410 /* Pods_Covid_Updates__KETests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		74D7CC32253DD86600E21952 /* Covid Updates -KEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid Updates -KEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D7CC36253DD86600E21952 /* Covid_Updates__KEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_Updates__KEUITests.swift; sourceTree = "<group>"; };
 		74D7CC38253DD86600E21952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E1C076256F841C00A82ABF /* DataByName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataByName.swift; sourceTree = "<group>"; };
 		83A28E13B22016EFDC482641 /* Pods-Covid Updates -KETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid Updates -KETests.debug.xcconfig"; path = "Target Support Files/Pods-Covid Updates -KETests/Pods-Covid Updates -KETests.debug.xcconfig"; sourceTree = "<group>"; };
 		867FD874E3E8E6CE735511CC /* Pods_Covid_Updates__KE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FABFBFC002F7A4B968188D9 /* Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 		74AD89352541B296007F6C59 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				74E1C075256F7D6900A82ABF /* Models */,
 				74AD89362541B2C6007F6C59 /* API Classes */,
 			);
 			path = Network;
@@ -165,6 +168,14 @@
 				74D7CC38253DD86600E21952 /* Info.plist */,
 			);
 			path = "Covid Updates -KEUITests";
+			sourceTree = "<group>";
+		};
+		74E1C075256F7D6900A82ABF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74E1C076256F841C00A82ABF /* DataByName.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BFAEE0EE2F2E7D9951583493 /* Frameworks */ = {
@@ -431,6 +442,7 @@
 				74D7CC16253DD86100E21952 /* ViewController.swift in Sources */,
 				74D7CC12253DD86100E21952 /* AppDelegate.swift in Sources */,
 				74AD89382541B2E9007F6C59 /* KEService.swift in Sources */,
+				74E1C077256F841C00A82ABF /* DataByName.swift in Sources */,
 				74D7CC1C253DD86100E21952 /* Covid_Updates__KE.xcdatamodeld in Sources */,
 				74D7CC14253DD86100E21952 /* SceneDelegate.swift in Sources */,
 			);
