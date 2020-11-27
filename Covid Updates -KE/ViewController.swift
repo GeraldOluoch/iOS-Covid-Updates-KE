@@ -30,8 +30,14 @@ class ViewController: UIViewController {
 //        downloadcountrydata("kenya")
         
         let urlString = "https://rapidapi.p.rapidapi.com/country"
-        
         let url = URL(string: urlString)
+        
+        var request = URLRequest (url: url!)
+        request.httpMethod = "GET"
+        
+        // Set HTTP Request Header
+        request.setValue("x-rapidapi-host", forHTTPHeaderField: "covid-19-data.p.rapidapi.com")
+        request.setValue("x-rapidapi-key", forHTTPHeaderField: "3bee4b7e02msh0cf90a5b2a0ca73p15204cjsn43ca8fe36992")
         
         guard url != nil else {
             return
