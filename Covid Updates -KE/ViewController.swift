@@ -11,28 +11,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
     
-//    private var state: State = .loading {
-//      didSet {
-//        switch state {
-//        case .loading:
-//          print("App Passed:- Application loaded successfully")
-//        case .error:
-//          print("App Failed:- Application failed to load")
-//        }
-//      }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         //Call API Fetch
-//        downloadcountrydata("kenya")
         
-        let urlString = "https://rapidapi.p.rapidapi.com/country"
+        let urlString = "https://covid-19-data.p.rapidapi.com/country?name=italy"
         let url = URL(string: urlString)
         
+        // Create URL Request
         var request = URLRequest (url: url!)
+        
+        // Specify HTTP Method to use
         request.httpMethod = "GET"
         
         // Set HTTP Request Header
@@ -43,9 +34,19 @@ class ViewController: UIViewController {
             return
         }
         
+        // Send HTTP Request
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
             
+        // Read HTTP Response Status code
+        if let response = response as? HTTPURLResponse {
+            print("Response HTTP Status code: \(response.statusCode)")
+        }
+               
+        // Convert HTTP Response Data to a simple String
+        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+            print("Response data string:\n \(dataString)")
+        }
             
             //check for errors
             if error == nil && data != nil {
@@ -67,48 +68,4 @@ class ViewController: UIViewController {
         // Make the API call
         dataTask.resume()
     }
-    
-//    let provider = MoyaProvider<KEService>()
-    
-    // Download Kenya data - API Fetch - Deprecated MOYA fetch
-//    func downloadcountrydata(_ country: String) {
-//        state = .loading
-//        provider.request(.RequestKE (name: "kenya" )) { [weak self] result in
-//            guard let self = self else {return}
-//            switch result {
-//            case .success(let moyaResponse):
-//                do {
-//                    print (try moyaResponse.mapJSON())
-//                    } catch {
-//                        self.state = .error
-//                }
-//                    // do something with the response data or statusCode
-//            case .failure:
-//                    // this means there was a network failure - either the request
-//                    // wasn't sent (connectivity), or no response was received (server
-//                    // timed out).  If the server responds with a 4xx or 5xx error, that
-//                    // will be sent as a ".success"-ful response.
-//                let alertController = UIAlertController(title: "Covid Stats -KE", message:
-//                    "Please check your internet!", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//            }
-//        }
-//    }
 }
-
-extension ViewController {
-    enum State {
-        case loading
-        case error
-    }
-}
- 
-
-/* TODO List */
-//TODO: Print complete JSON upon loading view
-//TODO: Pass data to UILabel in view
-//TODO: Fix Flag UI
-
-
-
