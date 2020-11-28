@@ -11,9 +11,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var deathsStats: UILabel!
     
     
-    var confirmedStatistics: Int
-    var recoveredStatistics: Int
-    var deathStatistics: Int
+    var countryStatistics: String = ""
+    var recoveredStatistics: Int = 0
+//    var recoveredStatistics: [Int]? = []
+//    var recoveredStatistics: String = ""
+    var deathStatistics: Int = 0
     
     
     override func viewDidLoad() {
@@ -63,8 +65,8 @@ class ViewController: UIViewController {
                             // Print the Kenya API
                             print(jsonDictionary["country"]!)
                             print(jsonDictionary["country"] as! String)
-                            print(jsonDictionary["confirmed"]!)
-                            print(jsonDictionary["recovered"]!)
+                            print(jsonDictionary["recovered"]as! Int)
+                            print(jsonDictionary["deaths"]!)
                             
 //                            guard let json = data as? [[String:Any]] else{return}
 //                            guard (json[0]["country"] as? String) != nil else {return}
@@ -72,8 +74,9 @@ class ViewController: UIViewController {
 //                            self.countryStatistics = dataByName["dataByName"]["country"] as! String
 
                     DispatchQueue.main.async {
-                        self.casesStats.text = self.countryStatistics
-                        self.casesStats.text = jsonDictionary["country"] as! String
+//                        self.casesStats.text = self.countryStatistics
+                        self.casesStats.text = jsonDictionary["country"] as? String
+                        self.recoveredStats.text = jsonDictionary["recovered"] as? Int
                             }
                         }
                     }

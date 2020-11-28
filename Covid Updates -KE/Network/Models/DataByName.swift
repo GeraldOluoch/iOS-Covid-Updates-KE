@@ -10,7 +10,7 @@ struct DataByName : Codable {
     var country:String
     var code:String = ""
     var confirmed:Int
-    var recvered:Int
+    var recovered:Int
     var critical:Int
     var deaths:Int
 
