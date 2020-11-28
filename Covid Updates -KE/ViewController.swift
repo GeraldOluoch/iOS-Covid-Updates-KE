@@ -10,6 +10,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
     
+    
+    var confirmedStatistics: Int
+    var recoveredStatistics: Int
+    var deathStatistics: Int
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,14 +56,26 @@ class ViewController: UIViewController {
             if error == nil && data != nil {
                 
             //Parse JSON
-            let decoder = JSONDecoder()
                 do {
-                    let dataByName = try decoder.decode(DataByName.self, from: data!)
-                    print (dataByName)
-                    print (dataByName.country)
-                    
+//                    if let dataByName = try decoder.decode(DataByName.self, from: data!) {
+                    if  let dataByName = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [[String:Any]] {
+                        for jsonDictionary in dataByName {
+                            // Print the Kenya API
+                            print(jsonDictionary["country"]!)
+                            print(jsonDictionary["country"] as! String)
+                            print(jsonDictionary["confirmed"]!)
+                            print(jsonDictionary["recovered"]!)
+                            
+//                            guard let json = data as? [[String:Any]] else{return}
+//                            guard (json[0]["country"] as? String) != nil else {return}
+
+//                            self.countryStatistics = dataByName["dataByName"]["country"] as! String
+
                     DispatchQueue.main.async {
-                        self.casesStats?.text = dataByName.country
+                        self.casesStats.text = self.countryStatistics
+                        self.casesStats.text = jsonDictionary["country"] as! String
+                            }
+                        }
                     }
                 }catch {
                     print("Error in JSON parsing")
@@ -67,3 +85,4 @@ class ViewController: UIViewController {
             dataTask.resume()
     }
 }
+

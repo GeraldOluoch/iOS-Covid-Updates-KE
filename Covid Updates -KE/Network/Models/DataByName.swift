@@ -7,7 +7,7 @@ import Foundation
 
 struct DataByName : Codable {
     
-    var country:String = ""
+    var country:String
     var code:String = ""
     var confirmed:Int
     var recvered:Int
