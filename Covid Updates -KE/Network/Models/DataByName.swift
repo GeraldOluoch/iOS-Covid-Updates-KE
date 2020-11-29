@@ -5,12 +5,12 @@
 import Foundation
 
 
-struct DataByName : Codable {
+struct DataByName : Decodable {
     
     var country:String
     var code:String = ""
     var confirmed:Int
-    var recovered:Int
+    var recovered:String
     var critical:Int
     var deaths:Int
 

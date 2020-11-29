@@ -9,15 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var casesStats: UILabel!
     @IBOutlet weak var recoveredStats: UILabel!
     @IBOutlet weak var deathsStats: UILabel!
-    
-    
-    var countryStatistics: String = ""
-    var recoveredStatistics: Int = 0
-//    var recoveredStatistics: [Int]? = []
-//    var recoveredStatistics: String = ""
-    var deathStatistics: Int = 0
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -51,7 +43,7 @@ class ViewController: UIViewController {
                
         // Convert HTTP Response Data to a simple String
         if let data = data, let dataString = String(data: data, encoding: .utf8) {
-            print("Response data string:\n \(dataString)")
+            print("Response data string:\n \(dataString) \n")
         }
             
             //check for errors
@@ -59,33 +51,38 @@ class ViewController: UIViewController {
                 
             //Parse JSON
                 do {
-//                    if let dataByName = try decoder.decode(DataByName.self, from: data!) {
                     if  let dataByName = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [[String:Any]] {
                         for jsonDictionary in dataByName {
                             // Print the Kenya API
                             print(jsonDictionary["country"]!)
-                            print(jsonDictionary["country"] as! String)
-                            print(jsonDictionary["recovered"]as! Int)
+                            print(jsonDictionary["code"]!)
+                            print(jsonDictionary["confirmed"]!)
+                            print(jsonDictionary["recovered"]!)
+                            print(jsonDictionary["critical"]!)
                             print(jsonDictionary["deaths"]!)
                             
-//                            guard let json = data as? [[String:Any]] else{return}
-//                            guard (json[0]["country"] as? String) != nil else {return}
-
-//                            self.countryStatistics = dataByName["dataByName"]["country"] as! String
+                            let numberFormatter = NumberFormatter()
+                                numberFormatter.numberStyle = .decimal
 
                     DispatchQueue.main.async {
-//                        self.casesStats.text = self.countryStatistics
-                        self.casesStats.text = jsonDictionary["country"] as? String
-                        self.recoveredStats.text = jsonDictionary["recovered"] as? Int
-                            }
+                        if let value = jsonDictionary["confirmed"] as? NSNumber {
+                            self.casesStats.text = value.stringValue
+                        }
+                        if let value = jsonDictionary["recovered"] as? NSNumber {
+                            self.recoveredStats.text = value.stringValue
+                        }
+                        if let value = jsonDictionary["deaths"] as? NSNumber {
+                            self.deathsStats.text = value.stringValue
                         }
                     }
-                }catch {
+                }
+            }
+        }catch {
                     print("Error in JSON parsing")
                 }
             }
-        } // Make the API call
-            dataTask.resume()
+        }
+        // Make the API call
+        dataTask.resume()
     }
 }
-
