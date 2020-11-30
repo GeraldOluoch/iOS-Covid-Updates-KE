@@ -63,6 +63,7 @@ class ViewController: UIViewController {
                             
                             let numberFormatter = NumberFormatter()
                                 numberFormatter.numberStyle = .decimal
+                            numberFormatter.groupingSeparator = ","
 
                     DispatchQueue.main.async {
                         if let value = jsonDictionary["confirmed"] as? NSNumber {
