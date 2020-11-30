@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             
         // Read HTTP Response Status code
         if let response = response as? HTTPURLResponse {
-            print("Response HTTP Status code: \(response.statusCode)")
+            print("Response HTTP Status code: \(response.statusCode)\n")
         }
                
         // Convert HTTP Response Data to a simple String
@@ -54,12 +54,12 @@ class ViewController: UIViewController {
                     if  let dataByName = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [[String:Any]] {
                         for jsonDictionary in dataByName {
                             // Print the Kenya API
-                            print(jsonDictionary["country"]!)
-                            print(jsonDictionary["code"]!)
-                            print(jsonDictionary["confirmed"]!)
-                            print(jsonDictionary["recovered"]!)
-                            print(jsonDictionary["critical"]!)
-                            print(jsonDictionary["deaths"]!)
+                            print("Country Code    :", jsonDictionary["code"]!)
+                            print("Country         :", jsonDictionary["country"]!)
+                            print("Confirmed Cases :", jsonDictionary["confirmed"]!)
+                            print("Recovered Cases :", jsonDictionary["recovered"]!)
+                            print("Critical Cases  :", jsonDictionary["critical"]!)
+                            print("Death Cases     :", jsonDictionary["deaths"]!)
                             
                             let numberFormatter = NumberFormatter()
                                 numberFormatter.numberStyle = .decimal
