@@ -87,3 +87,6 @@ class ViewController: UIViewController {
         dataTask.resume()
     }
 }
+
+//TODO
+//TODO: Add thousand separator in statistics
