@@ -67,13 +67,16 @@ class ViewController: UIViewController {
 
                     DispatchQueue.main.async {
                         if let value = jsonDictionary["confirmed"] as? NSNumber {
-                            self.casesStats.text = value.stringValue
+//                            self.casesStats.text = value.stringValue
+                            self.casesStats.text = numberFormatter.string(from: value)
                         }
                         if let value = jsonDictionary["recovered"] as? NSNumber {
-                            self.recoveredStats.text = value.stringValue
+//                            self.recoveredStats.text = value.stringValue
+                            self.recoveredStats.text = numberFormatter.string(from: value)
                         }
                         if let value = jsonDictionary["deaths"] as? NSNumber {
-                            self.deathsStats.text = value.stringValue
+//                            self.deathsStats.text = value.stringValue
+                            self.deathsStats.text = numberFormatter.string(from: value)
                         }
                     }
                 }
@@ -89,4 +92,4 @@ class ViewController: UIViewController {
 }
 
 //TODO
-//TODO: Add thousand separator in statistics
+//TODO: Add cardview on the digits
