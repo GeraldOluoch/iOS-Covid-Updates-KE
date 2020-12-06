@@ -92,4 +92,5 @@ class ViewController: UIViewController {
 }
 
 //TODO
-//TODO: Add cardview on the digits
+//TODO: Add cardview on the digits and the flags
+//TODO: Add label to show country
