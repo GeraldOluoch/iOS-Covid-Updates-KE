@@ -96,3 +96,6 @@ class ViewController: UIViewController {
 //TODO: Add label to show country
 //TODO: Add label to show country code
 //TODO: Add bottom tab
+
+//FIXME
+//FIXME : Bottom TabBar on iPhone 7 and below
