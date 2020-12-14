@@ -75,7 +75,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="id3-GB-Pno"/>
+                                    <tabBarItem selectedImage="house" catalog="system" id="id3-GB-Pno"/>
                                     <tabBarItem systemItem="more" id="831-VH-YnJ"/>
                                 </items>
                             </tabBar>
@@ -95,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="kenya" width="533.5" height="357.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
