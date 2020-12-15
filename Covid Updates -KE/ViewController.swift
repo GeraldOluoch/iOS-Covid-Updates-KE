@@ -95,7 +95,7 @@ class ViewController: UIViewController {
 //TODO: Add cardview on the digits and the flags
 //TODO: Add label to show country
 //TODO: Add label to show country code
-//TODO: Add bottom tab
+//TODO: Add bottom tab with 5 options
 
 //FIXME
 //FIXME : Bottom TabBar on iPhone 7 and below
