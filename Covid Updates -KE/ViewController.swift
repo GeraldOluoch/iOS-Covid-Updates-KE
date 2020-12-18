@@ -96,6 +96,7 @@ class ViewController: UIViewController {
 //TODO: Add label to show country
 //TODO: Add label to show country code
 //TODO: Add bottom tab with 5 options
+//TODO: Enable user to view the onboarding screen under the more options
 
 //FIXME
 //FIXME : Bottom TabBar on iPhone 7 and below
