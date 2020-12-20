@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // Always adopt a light mode
+        overrideUserInterfaceStyle = .light
+        
         //Call API Fetch
         let urlString = "https://covid-19-data.p.rapidapi.com/country?name=kenya"
         let url = URL(string: urlString)
@@ -94,10 +97,6 @@ class ViewController: UIViewController {
 
 //TODO
 //TODO: Add cardview on the digits and the flags
-//TODO: Add label to show country
-//TODO: Add label to show country code
 //TODO: Add bottom tab with 5 options
 //TODO: Enable user to view the onboarding screen under the more options
 
-//FIXME
-//FIXME : Bottom TabBar on iPhone 7 and below
