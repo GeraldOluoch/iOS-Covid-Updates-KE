@@ -4,7 +4,6 @@
 
 import Foundation
 
-
 struct DataByName : Decodable {
     
     var country:String
