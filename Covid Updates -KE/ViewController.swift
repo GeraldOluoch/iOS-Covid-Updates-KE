@@ -94,9 +94,3 @@ class ViewController: UIViewController {
         dataTask.resume()
     }
 }
-
-//TODO
-//TODO: Add cardview on the digits and the flags
-//TODO: Add bottom tab with 5 options
-//TODO: Enable user to view the onboarding screen under the more options
-
