@@ -21,6 +21,7 @@
 		74E1C077256F841C00A82ABF /* DataByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C076256F841C00A82ABF /* DataByName.swift */; };
 		C8AF34CA95BB83B7F860769C /* Pods_Covid_Updates__KETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC52C4480899147A70A9410 /* Pods_Covid_Updates__KETests.framework */; };
 		F1B9567E2598913B00A01AE2 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */; };
+		F1B956832598AC8400A01AE2 /* OnboardingPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B956822598AC8400A01AE2 /* OnboardingPresent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9FABFBFC002F7A4B968188D9 /* Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB7E44DE354263402F851E0 /* Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig"; path = "Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		F1B956822598AC8400A01AE2 /* OnboardingPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresent.swift; sourceTree = "<group>"; };
 		FEC52C4480899147A70A9410 /* Pods_Covid_Updates__KETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF11707D83F57A27DD5D7057 /* Pods-Covid Updates -KE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid Updates -KE.release.xcconfig"; path = "Target Support Files/Pods-Covid Updates -KE/Pods-Covid Updates -KE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */,
+				F1B956822598AC8400A01AE2 /* OnboardingPresent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				74D7CC16253DD86100E21952 /* ViewController.swift in Sources */,
 				F1B9567E2598913B00A01AE2 /* OnboardingVC.swift in Sources */,
 				74D7CC12253DD86100E21952 /* AppDelegate.swift in Sources */,
+				F1B956832598AC8400A01AE2 /* OnboardingPresent.swift in Sources */,
 				74E1C077256F841C00A82ABF /* DataByName.swift in Sources */,
 				74D7CC1C253DD86100E21952 /* Covid_Updates__KE.xcdatamodeld in Sources */,
 				74D7CC14253DD86100E21952 /* SceneDelegate.swift in Sources */,
