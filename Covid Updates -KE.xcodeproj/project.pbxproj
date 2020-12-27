@@ -20,6 +20,7 @@
 		74D7CC37253DD86600E21952 /* Covid_Updates__KEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7CC36253DD86600E21952 /* Covid_Updates__KEUITests.swift */; };
 		74E1C077256F841C00A82ABF /* DataByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C076256F841C00A82ABF /* DataByName.swift */; };
 		C8AF34CA95BB83B7F860769C /* Pods_Covid_Updates__KETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC52C4480899147A70A9410 /* Pods_Covid_Updates__KETests.framework */; };
+		F1B9567E2598913B00A01AE2 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		867FD874E3E8E6CE735511CC /* Pods_Covid_Updates__KE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FABFBFC002F7A4B968188D9 /* Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KE_Covid_Updates__KEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB7E44DE354263402F851E0 /* Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig"; path = "Target Support Files/Pods-Covid Updates -KE-Covid Updates -KEUITests/Pods-Covid Updates -KE-Covid Updates -KEUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		FEC52C4480899147A70A9410 /* Pods_Covid_Updates__KETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_Updates__KETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF11707D83F57A27DD5D7057 /* Pods-Covid Updates -KE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid Updates -KE.release.xcconfig"; path = "Target Support Files/Pods-Covid Updates -KE/Pods-Covid Updates -KE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 		74D7CC10253DD86100E21952 /* Covid Updates -KE */ = {
 			isa = PBXGroup;
 			children = (
+				F1B956792598907300A01AE2 /* Presentation */,
 				74AD89352541B296007F6C59 /* Network */,
 				74D7CC11253DD86100E21952 /* AppDelegate.swift */,
 				74D7CC13253DD86100E21952 /* SceneDelegate.swift */,
@@ -196,6 +199,38 @@
 				2CDFA9D9623AFF88ABA3206F /* Pods-Covid Updates -KETests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1B956792598907300A01AE2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F1B9567A2598907E00A01AE2 /* Onboarding */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F1B9567A2598907E00A01AE2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F1B9567C2598909B00A01AE2 /* ViewModel */,
+				F1B9567B2598909300A01AE2 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F1B9567B2598909300A01AE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1B9567D2598913B00A01AE2 /* OnboardingVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1B9567C2598909B00A01AE2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D7CC16253DD86100E21952 /* ViewController.swift in Sources */,
+				F1B9567E2598913B00A01AE2 /* OnboardingVC.swift in Sources */,
 				74D7CC12253DD86100E21952 /* AppDelegate.swift in Sources */,
 				74E1C077256F841C00A82ABF /* DataByName.swift in Sources */,
 				74D7CC1C253DD86100E21952 /* Covid_Updates__KE.xcdatamodeld in Sources */,
