@@ -60,5 +60,7 @@
 
 This is a simple app that shows the current Covid 19 statistics in Kenya. It's as simple as it can get. Just one view after the splashscreen that does take you right at the stats that are originating from a public API hosted at RapidAPI.
 
+To use a different key, open an account at RapidAPI then get a key from the Covid-19 API.
+
 You can clone the project but make sure to use your own key from RapidAPI as the current one may change.
 
