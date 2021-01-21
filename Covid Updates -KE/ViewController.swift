@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         request.httpMethod = "GET"
         
         // Set HTTP Request Header
+        // Use your own key from RapidApi to querry the API - Key may change any time.
         request.addValue("covid-19-data.p.rapidapi.com", forHTTPHeaderField: "x-rapidapi-host")
         request.addValue("3bee4b7e02msh0cf90a5b2a0ca73p15204cjsn43ca8fe36992", forHTTPHeaderField: "x-rapidapi-key")
         
