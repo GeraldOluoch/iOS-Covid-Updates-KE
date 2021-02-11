@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="">
+  <a href="#icon">
     <img src="images/icon_80.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -11,14 +11,14 @@
   <p align="center">
     A simple way to currently view the Covid -19 Statistics in Kenya 
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
+    <a href="#explore_the_docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="#view_demo">View Demo</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="#report_bug">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
+    <a href="#request_feature">Request Feature</a>
   </p>
 </p>
 
@@ -55,8 +55,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This is a simple app that shows the current Covid 19 statistics in Kenya. It's as simple as it can get. Just one view after the splashscreen that does take you right at the stats that are originating from a public API hosted at RapidAPI.
 
