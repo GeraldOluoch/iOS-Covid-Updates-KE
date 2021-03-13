@@ -62,3 +62,5 @@ To use a different key, open an account at RapidAPI then get a key from the Covi
 
 You can clone the project but make sure to use your own key from RapidAPI as the current one may change.
 
+Currently, Apple does not allow apps related to Covid-19 submitted by independednt developers but it does allow if it originates from hospital organisations.
+
